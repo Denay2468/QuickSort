@@ -17,3 +17,11 @@ int partition(int low, int high) {
     swap(arr[i + 1], arr[high]);
     return i + 1;
 }
+
+void quickSort(int low, int high) {
+    if (low < high) {
+        int pi = partition(low, high);
+        quickSort(low, pi - 1);
+        quickSort(pi + 1, high);
+    }
+}
